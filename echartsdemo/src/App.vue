@@ -5,7 +5,7 @@
                 <router-link to="/histogram">直方图</router-link>
             </div>
             <div class="tab-item">
-                <router-link to="/histogram">折线图</router-link>
+                <router-link to="/linechart">折线图</router-link>
             </div>
         </div>
         <keep-alive>

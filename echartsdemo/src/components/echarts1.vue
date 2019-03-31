@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="myechart" style="width:500px;height:500px"></div>
+        <div id="myechart" style="width:100%;height:500px"></div>
     </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
     name: "app",
     data() {
         return {
-            msg: "Welcome to Your Vue.js App"
+            msg: ""
         };
     },
     mounted() {

@@ -2,14 +2,19 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router';
 import histogram from 'components/echarts1.vue'
+import linechart from 'components/echarts2.vue'
 Vue.use(VueRouter);
 const routes = [{
     path: '/',
-    component: App
+    component: histogram
 },
 {
     path: '/histogram',
     component: histogram
+},
+{
+    path: '/linechart',
+    component: linechart
 }
 ]
 const router = new VueRouter({
