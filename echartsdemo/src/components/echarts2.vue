@@ -5,8 +5,11 @@
 </template>
 
 <script>
-var echarts = require("echarts");
-require("echarts/lib/chart/line");
+// var echarts = require("echarts");
+
+let echarts = require("echarts/lib/echarts");
+//以下组件按需引入
+// require("echarts/lib/chart/line");
 // require("echarts/lib/component/tooltip"); //tooltip组件
 // require("echarts/lib/component/title"); //title组件
 // require("echarts/lib/component/legend"); //legend组件
