@@ -7,6 +7,9 @@
             <div class="tab-item">
                 <router-link to="/linechart">折线图</router-link>
             </div>
+            <div class="tab-item">
+                <router-link to="/completeechart">完整折线图示例</router-link>
+            </div>
         </div>
         <keep-alive>
             <router-view></router-view>
