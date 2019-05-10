@@ -43,76 +43,78 @@ export default {
         };
         let xAxis = {
             type: "category",
-            boundaryGap: false,
-            data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+            name: "x",
+            splitLine: { show: false },
+            data: [
+                "星期一",
+                "星期二",
+                "星期三",
+                "星期四",
+                "星期五",
+                "星期六",
+                "星期日"
+            ]
         };
         let yAxis = {
             type: "value",
-            axisLabel: {
-                formatter: "{value} °C"
-            }
+            name: "y"
         };
         let tooltip = {
             trigger: "axis" //axis item none三个值
         };
+        let grid = {
+            left: "3%",
+            right: "4%",
+            bottom: "3%",
+            containLabel: true
+        };
         let series = [
             {
-                name: "最高气温",
+                name: "指数",
                 type: "line",
-                data: [11, 11, 15, 13, 12, 13, 10],
+                color: "#1188FF",
+                data: [4, 8, 16, 32, 64, "-", "-"],
                 markPoint: {
                     // data: [{ type: "max", name: "最大值" }]
-                    data: [{ name: "周最低", value: 15, xAxis: 2, yAxis: 15 }]
+                    // data: [{ value: 16, xAxis: 2, yAxis: 16 }]
+                    data: [{ coord: [2, 16] }],
+                    itemStyle: {
+                        color: "#4587E7",
+                        borderColor: "#000",
+                        borderWidth: 0,
+                        borderType: "solid"
+                    }
                 },
-                markLine: {
-                    data: [{ type: "average", name: "平均值" }]
+                label: {
+                    show: true,
+                    color: "rgba(204,204,204,1)",
+                    formatter: obj => {
+                        console.log("测试label------>", JSON.stringify(obj));
+                        return "￥" + obj.value;
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        lineStyle: {
+                            color: "#1989FB" //折线颜色
+                        }
+                    }
                 }
             },
             {
-                name: "最低气温",
+                name: "指数",
                 type: "line",
-                data: [1, -2, 2, 5, 3, 2, 0],
-
-                label: {
-                    nomal: {
-                        position: ["30%", "50%"],
-                        textStyle: {
-                            color: "#000000"
-                        }
-                    }
-                },
+                color: "#FF00FF",
+                data: ["-", "-", "-", "-", 64, 128, 256],
                 markPoint: {
-                    data: [{ name: "周最低", value: -2, xAxis: 1, yAxis: -1 }],
-                    label: {
-                        nomal: {
-                            position: ["30%", "50%"],
-                            textStyle: {
-                                color: "#000000"
-                            }
-                        }
+                    // data: [{ type: "max", name: "最大值" }]
+                    data: [{ name: "周最低", value: 16, xAxis: 4, yAxis: 63 }],
+                    itemStyle: {
+                        color: "#4587E7",
+                        borderColor: "#000",
+                        borderWidth: 0,
+                        borderType: "solid"
                     }
-                },
-                markLine: {
-                    data: [
-                        { type: "average", name: "平均值" },
-                        [
-                            {
-                                symbol: "arrow",
-                                label: {
-                                    normal: {
-                                        formatter: "最大值"
-                                    }
-                                },
-                                type: "max",
-                                name: "最大值"
-                            },
-                            {
-                                symbol: "circle",
-                                x: "60%",
-                                y: "50%"
-                            }
-                        ]
-                    ]
                 }
             }
         ];
@@ -122,6 +124,7 @@ export default {
         this.option.yAxis = yAxis;
         this.option.tooltip = tooltip;
         this.option.series = series;
+        this.option.grid = grid;
     },
     mounted() {
         //基于准备好的dom,初始化echarts实例

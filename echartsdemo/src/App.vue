@@ -10,6 +10,9 @@
             <div class="tab-item">
                 <router-link to="/completeechart">完整折线图示例</router-link>
             </div>
+            <div class="tab-item">
+                <router-link to="/polylinechart">折线图分段展示</router-link>
+            </div>
         </div>
         <keep-alive>
             <router-view></router-view>

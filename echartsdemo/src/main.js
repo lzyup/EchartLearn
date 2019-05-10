@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 import histogram from 'components/echarts1.vue'
 import linechart from 'components/echarts2.vue'
 import completechart from 'components/echarts3.vue'
+import polylinechart from 'components/echarts4.vue'
 Vue.use(VueRouter);
 const routes = [{
     path: '/',
@@ -20,6 +21,10 @@ const routes = [{
 {
     path: '/completeechart',
     component: completechart
+},
+{
+    path: '/polylinechart',
+    component: polylinechart
 }
 ]
 const router = new VueRouter({
