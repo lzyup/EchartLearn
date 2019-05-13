@@ -28,9 +28,9 @@ export default {
         };
     },
     created() {
-        // let legend = {
-        //     data: ["最高气温", "最低气温"]
-        // };
+        let legend = {
+            data: ["最高气温", "最低气温"]
+        };
         // let toolbox = {
         //     show: true,
         //     feature: {

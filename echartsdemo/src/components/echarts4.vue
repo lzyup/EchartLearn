@@ -1,6 +1,7 @@
 <template>
     <div>
         <div id="myechart" style="width:100%;height:500px;"></div>
+        <!-- <img src="./images/qipao@3x.png" style="height:18px;width:32px;" /> -->
     </div>
 </template>
 
@@ -220,18 +221,17 @@ export default {
                         }
                     ],
                     symbolKeepAspect: true,
-                    // symbolSize: [32, 18],
-                    // symbolOffset: [0, "-100%"],
-                    // symbol: "image:../../../assets/images/qipao@3x.png",
-                    itemStyle: {
-                        color: "#4587E7",
-                        borderColor: "#000",
-                        borderWidth: 0,
-                        borderType: "solid"
-                    },
+                    symbolSize: [42, 18],
+                    symbolOffset: [0, "-150%"],
+                    symbol:
+                        "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAA2CAYAAAA4T5zSAAAAAXNSR0IArs4c6QAAAk9JREFUeAHtnLlKBEEURd9rBXFJXBL9BX9AUxFEEEMjBcEtEUFcQ0MVxMRE0czQwA9QQ/9ADcTIFXRGA3EBsXxvHEFcYEC77zRzC3q6qrqp25xbt5gZqFbJlxCC1i/IoDUH7GgOIjUf13j+OwEVubdRDuzYyMzIuqoaYhHrF2lYDo2vz7JpPW3eZomXgEHfiyqk92ZcLyOf+YQfL/Cvo/tEzzE39lo3H4asY+3rTWzHT8CSMByZjK/5LBgCA25AM0abqs4+suWH33ZAc8HZewJYgARoABC+S9MAGgAmAJZnAmgAmABYngmgAWACYHkmgAaACYDlmQAaACYAlmcCaACYAFieCaABYAJgeSaABoAJgOWZABoAJgCWZwJoAJgAWJ4JoAFgAmB5JoAGgAmA5ZkAGgAmAJZnAmgAmABYngmgAWACYPkov30S/BilKe/sfQnyvassGAIHbsAGRpuqzl7zO+R3fO8qkSRHwDdr24759si3zPuube9ITr60lZx1jrmxt/p74bsiPkjEczbQv78rIh7JeEZtWg1VT3eyG4K0FKSgclJRKa1XY3pd0P0J35S6H2IXI/pQWS1dqnJUAKtMuUpnscL350+dAf7Q56OakXLpMBPOvP1Tscg/2dF9Pa3HP10vlr5UGuDwshN6KmXSYdXbbzBVgr2Ipy87q/vfrhVZR2oNcI7ZST20We7L0eNnrtY3lZ3Rrc99xVpPtQEO1We5/Z/SY9WXHGSVFYO/lKvzIzkC9Yuhv3Y+bM+FkPpJlRy1f1Yi/H8GWgrDvQHn7nmqOJKrVAAAAABJRU5ErkJggg==",
                     label: {
-                        show: false,
-                        color: "rgba(204,204,204,1)"
+                        show: true,
+                        color: "#ffffff",
+                        offset: [0, -2],
+                        formatter: obj => {
+                            return "￥" + obj.value;
+                        }
                     }
                 },
                 type: "line",
