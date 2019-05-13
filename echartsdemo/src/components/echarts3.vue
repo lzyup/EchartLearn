@@ -28,19 +28,19 @@ export default {
         };
     },
     created() {
-        let legend = {
-            data: ["最高气温", "最低气温"]
-        };
-        let toolbox = {
-            show: true,
-            feature: {
-                dataZoom: {},
-                dataView: { readOnly: false },
-                magicType: { type: ["line", "bar"] },
-                restore: {},
-                saveAsImage: {}
-            }
-        };
+        // let legend = {
+        //     data: ["最高气温", "最低气温"]
+        // };
+        // let toolbox = {
+        //     show: true,
+        //     feature: {
+        //         dataZoom: {},
+        //         dataView: { readOnly: false },
+        //         magicType: { type: ["line", "bar"] },
+        //         restore: {},
+        //         saveAsImage: {}
+        //     }
+        // };
         let xAxis = {
             type: "category",
             boundaryGap: false,
