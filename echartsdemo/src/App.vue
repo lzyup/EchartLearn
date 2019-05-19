@@ -21,7 +21,7 @@
 </template>
 
 <script>
-var echarts = require("echarts");
+// var echarts = require("echarts");
 export default {
     name: "app",
     data() {

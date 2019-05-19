@@ -6,9 +6,9 @@
 </template>
 
 <script>
-// var echarts = require("echarts");
+var echarts = require("echarts");
 
-let echarts = require("echarts/lib/echarts");
+// let echarts = require("echarts/lib/echarts");
 //以下组件按需引入
 // require("echarts/lib/chart/line");
 // require("echarts/lib/component/tooltip"); //tooltip组件
@@ -246,9 +246,6 @@ export default {
                     }
                 },
                 symbolSize: 6, //拐点圆的大小
-                // // symbol: "circle",
-                // symbol:
-                //     "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAYAAACMo1E1AAAAAXNSR0IArs4c6QAAA6FJREFUWAnNWD1oFEEU/nZjSBQharqACAdaqIgQSKcmIKJGbCS1jUQL0UKLdMYujYVJiiTYWIuNaBQRzp9OCIioRSAHIqTzJyCaEJP1+2Zvk7udmcvd5W65D5a5nTfvve/evJ15MwHqQDSNdoToR4RBPjkE6GHbw7ab7Xe2i2wXaXqB42axjtfBVazW6iqoRSF6gJN0dI2Oz1OvqwbdJRKeJdGp4AreVqtXFbloBkdocIykLlRr2DsuwFPKRoJhfPaOKQoqkovy2IF53OPY63zCrYzVIF9nJCdwELeDAfzz6XnJRQ+ZP8t4RMUBn3ID+vPoxFBwmXnqgJMcp/EQp/A5x+ccOo3uKjCK5zjN82nDFrlixN5vSax9N7D/LHDgIrD3MLCrB+jsBpYZhD/8UH9+Ab4+Ab69AFZ/p/2m3wuMYF86gmXkijn2kpr+qezYAxwfAY7eANp2pp3Y72t/gU/jwIcxYOWXLd/syXO+zpTmYDm5adznWHr1IHcJODEDdOzzDKjQvfIDeDcMFB5XGIRxroc3kwEb5MxyEeEjBe6vsvcOoIcJUj8iYO5u/LiN6Cs+liwzpUQY90rERineDjGxoX4v7Zg/qXcL4iMeBsabWfnX8CbpLGs1lae1omyXWKlVRvDVkH+K23BKO0kcOW1JLij5lWMNJSZH/KMmd2nfhSKf0Gzi8V5pD9NXWU/y25bsHtmVfRfIR7xCZlk/5fYmrnVMy0UzIfvyY6NLvELuBIO2jD1aYKtZx5zKVXbKvvy4QF4il3PJzMrvFDS4UzuMC+QVMje57zigLSkL+PyQlyLnJqe9Mgv4/JCXIsfd2gFt4lnA54e8FDlnLWWqiyzIqYpxgbwUOR1EbKjsyQI+P+SlyLlZqB7LAj4/5KXIFZwcVChmAb+fBZF75uSgClaFYjMh+/LjAs+7oQ68lC1ZcpXWqmCbCdl3l/BL4hWak7gOvC6Y0poVbDOgylj2XSAf8YpLJp7EXWNMza/Sml9NY0F7sus7UxT5GHLmiiA+idscVPOrtG4kZM93liCP5MoijlzsWMXVupODqftHKdpuBKk/Rzv+Pyv/4mGwQa54qJhMBFYrgyqtlSv1QHrS9xNTgTyRHG7kgvXyJlr63CqaLXviT2LYKnclGzmXEFNrLlV4d8Gf+dL+JvzWLVOf8ecwXpZzaXlT7+eASd6N3Cq9G0n7r0guGdySN5sJuaRtyTvhhFzSVn2brnJMVU+dt+n/AU4VO15l8D89AAAAAElFTkSuQmCC",
                 itemStyle: {
                     normal: {
                         lineStyle: {
